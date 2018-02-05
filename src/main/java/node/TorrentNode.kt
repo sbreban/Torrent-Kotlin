@@ -19,8 +19,8 @@ class TorrentNode @Throws(Exception::class)
 constructor(private val localNode: NodeConfiguration, private val otherNodes: List<NodeConfiguration>) {
 
   private val server: ServerSocket = ServerSocket(localNode.port, 100, InetAddress.getByName(localNode.addr))
-  private val localFiles: Map<ByteString, List<ByteArray>>
-  private val fileNameToHash: Map<String, ByteString>
+  private val localFiles: MutableMap<ByteString, MutableList<ByteArray>>
+  private val fileNameToHash: MutableMap<String, ByteString>
 
   private val executor = Executors.newFixedThreadPool(10)
   private val lock = ReentrantLock()
