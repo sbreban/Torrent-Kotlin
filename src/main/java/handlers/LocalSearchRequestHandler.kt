@@ -32,7 +32,7 @@ object LocalSearchRequestHandler {
             }
           }
 
-          val chunkInfos = ChunkInfoUtil.getChunkInfos(fileContent)
+          val chunkInfos = ChunkInfoUtil.getChunkInfos(fileContent!!)
           logger.fine(chunkInfos.toString())
 
           val fileInfo = FileInfo.newBuilder().setHash(fileHash).setSize(fileSize).setFilename(foundFileName).addAllChunks(chunkInfos).build()
