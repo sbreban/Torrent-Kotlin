@@ -1,6 +1,6 @@
 # Torrent-Kotlin
 
-GPU and distributed architecture computing - Babeș - Bolyai University, Cluj - Napoca
+GPU and distributed architecture computing, Babeș - Bolyai University, Cluj - Napoca
 
 1. The communication is done using the Google Protobuffer 3.x messages defined below, over TCP. The exchange will be
    synchronous. When sending a request, open the TCP connection, send the message, get back the response, then close
